@@ -1,0 +1,101 @@
+:root {
+  color-scheme: light;
+  font-family: Avenir Next, Avenir, Montserrat, system-ui, -apple-system, sans-serif;
+  background: #dff3c4;
+  color: #073f2f;
+}
+
+* { box-sizing: border-box; }
+
+html, body { min-height: 100%; margin: 0; }
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: clamp(24px, 5vw, 72px);
+  background: url("assets/farm-world.png") center / cover no-repeat;
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(237, 255, 218, .96) 0%, rgba(237, 255, 218, .72) 40%, rgba(237, 255, 218, .08) 78%),
+    linear-gradient(0deg, rgba(5, 71, 46, .17), transparent 46%);
+}
+
+.welcome {
+  position: relative;
+  width: min(720px, 100%);
+  margin-right: auto;
+  text-align: center;
+  padding: clamp(30px, 5vw, 58px);
+  border: 2px solid rgba(255, 203, 68, .8);
+  border-radius: 36px;
+  background: rgba(255, 255, 244, .85);
+  box-shadow: 0 28px 70px rgba(5, 70, 45, .22);
+  backdrop-filter: blur(10px);
+}
+
+.mascot {
+  width: clamp(132px, 19vw, 220px);
+  aspect-ratio: 1;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 16px rgba(36, 81, 42, .2));
+}
+
+.eyebrow {
+  margin: 12px 0 8px;
+  color: #187652;
+  font-size: clamp(.8rem, 1.3vw, 1rem);
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: #064a34;
+  font-family: Georgia, Charter, serif;
+  font-size: clamp(2.7rem, 7vw, 5.7rem);
+  line-height: .93;
+  letter-spacing: -.045em;
+  text-shadow: 0 3px 0 rgba(255,255,255,.7);
+}
+
+.intro {
+  max-width: 590px;
+  margin: 24px auto 20px;
+  color: #24533f;
+  font-size: clamp(1rem, 1.8vw, 1.22rem);
+  line-height: 1.6;
+}
+
+.status {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: #f6bd33;
+  color: #153f2b;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.credit {
+  margin: 22px 0 0;
+  color: #557363;
+  font-size: .92rem;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .shade {
+    background: linear-gradient(rgba(239, 255, 221, .9), rgba(239, 255, 221, .72));
+  }
+
+  .welcome { margin: auto; }
+}
